@@ -16,8 +16,8 @@
  */
 
 module.exports = {
-    
-  
+
+
 
 
   /**
@@ -26,5 +26,5 @@ module.exports = {
    */
   _config: {}
 
-  
+
 };
