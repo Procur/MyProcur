@@ -27,6 +27,7 @@ module.exports = {
         Company.findOne({ user: user.id }, function(err, company){
           if(err) { return res.redirect('/dashboard'); }
           payload.push(company);
+          console.log(req.session);
           res.view({ user: payload[0], company: payload[1] })
         });
       }

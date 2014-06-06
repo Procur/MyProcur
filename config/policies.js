@@ -18,8 +18,8 @@ module.exports.policies = {
   // (`true` allows public access)
   '*': true,
 
-  buyerController: {
-    test: ['isAuthenticated']
+  DashboardController: {
+    index: ['isAuthenticated']
   }
 
   /*
