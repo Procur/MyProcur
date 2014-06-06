@@ -18,13 +18,14 @@
 module.exports = {
 
 
-
+  test: function(req, res){
+    console.log(req.session);
+  }
 
   /**
    * Overrides for the settings in `config/controllers.js`
    * (specific to BuyerController)
    */
-  _config: {}
 
 
 };
