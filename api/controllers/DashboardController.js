@@ -21,15 +21,40 @@ module.exports = {
     var user = req.session.passport.user;
     var payload = [];
     User.findOne({ id: user }, function(err, user){
-      if(err) { return res.redirect('/dashboard'); }
+      if(err) { return res.redirect('/'); }
       else {
         payload.push(user);
         Company.findOne({ user: user.id }, function(err, company){
-          if(err) { return res.redirect('/dashboard'); }
+          if(err) { return res.redirect('/'); }
           payload.push(company);
-          console.log(company);
-          console.log(req.session);
-          res.view({ user: payload[0], company: payload[1] })
+          Buyer.findOne({ company: company.id }, function(err, buyer){
+            if(err){ return res.redirect('/') }
+            console.log(buyer);
+            if(buyer){
+              payload.push(buyer);
+              Supplier.findOne({ company: company.id }, function(err, supplier){
+                if(err) { return res.redirect('/'); }
+                console.log(supplier);
+                if(supplier) {
+                  payload.push(supplier);
+                  res.view({ user: payload[0], company: payload[1], buyer: payload[2], supplier: payload[3] });
+                }
+              });
+            }
+            else {
+              payload.push('no buyer');
+              Supplier.findOne({ company: company.id }, function(err, supplier){
+                if(err) { return res.redirect('/'); }
+                if(supplier) {
+                  payload.push(supplier);
+                  res.view({ user: payload[0], company: payload[1], buyer: payload[2], supplier: payload[3] });
+                }
+                else {
+                  payload.push('no supplier');
+                }
+              });
+            }
+          });
         });
       }
     });

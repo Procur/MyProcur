@@ -36,6 +36,13 @@ module.exports = {
       type: 'boolean',
       required: true
     },
+    jobTitle: {
+      type: 'string',
+    },
+    activeMode: {
+      type: 'string'
+    },
+
 
     //UTILITY
 
