@@ -39,6 +39,9 @@ module.exports = {
                   payload.push(supplier);
                   res.view({ user: payload[0], company: payload[1], buyer: payload[2], supplier: payload[3] });
                 }
+                else {
+                  res.view({ user: payload[0], company: payload[1], buyer: payload[2] });
+                }
               });
             }
             else {
