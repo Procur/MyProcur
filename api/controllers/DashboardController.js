@@ -14,6 +14,7 @@
  *
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
+var dateformat = require('dateformat');
 
 module.exports = {
 
@@ -32,6 +33,7 @@ module.exports = {
     User.findOne({ id: user }, function(err, user){
       if(err) { return res.redirect('/'); }
       else {
+        user.createdAt = dateformat(user.createdAt, 'yyyy');
         payload.push(user);
         Company.findOne({ user: user.id }, function(err, company){
           if(err) { return res.redirect('/'); }
