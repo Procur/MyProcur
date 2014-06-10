@@ -25,10 +25,10 @@
   <% if(company.logo){%> <li><strike>Add your company logo</strike></li> <%}else{%> <li>Add your company logo</li> <%}%>
   <% if(company.description){%> <li><strike>Add your company description</strike></li> <%}else{%> <li>Add your company description</li> <%}%>
   <% if(company.website){%> <li><strike>Add your company website</strike></li> <%}else{%> <li>Add your company website</li> <%}%>
-  <% if(buyer.responsibilityStatement){%> <li><strike>Add your SoR</strike></li> <%}else{%> <li>Add your SoR</li> <%}%>
 
   <% if(user.activeMode == 'buyer') { %>
     <% if(buyer) { %>
+      <% if(buyer.responsibilityStatement){%> <li><strike>Add your SoR</strike></li> <%}else{%> <li>Add your SoR</li> <%}%>
       <% if(buyer.preferredSupplierType){%> <li><strike>Add your preferred supplier type</strike></li> <%}else{%> <li>Add your preferred supplier type</li> <%}%>
       <% if(buyer.productsOfInterest){%> <li><strike>Add your products of interest</strike></li> <%}else{%> <li>Add your products of interest</li> <%}%>
     <% }
