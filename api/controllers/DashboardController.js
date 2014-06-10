@@ -55,6 +55,7 @@ module.exports = {
                 }
                 else {
                   payload.push('no supplier');
+                  res.view({ user: payload[0], company: payload[1], buyer: payload[2], supplier: payload[3] });
                 }
               });
             }
