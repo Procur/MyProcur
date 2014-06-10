@@ -14,26 +14,16 @@
  *
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
-nullCheck = function(collection, res){
-    if(!collection){
-        return res.redirect('/');
-    }
-    else{
-        console.log("There's a collection");
-    }
-};
 
 module.exports = {
 
   index: function(req, res){
     var user = req.session.passport.user;
     var payload = [];
-    var myRes = res;
 
     User.findOne({ id: user }, function(err, user){
       if(err) { return res.redirect('/'); }
       else {
-        nullCheck(user, myRes);
         payload.push(user);
         Company.findOne({ user: user.id }, function(err, company){
           if(err) { return res.redirect('/'); }
