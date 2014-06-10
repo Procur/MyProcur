@@ -20,6 +20,14 @@ module.exports = {
   index: function(req, res){
     var user = req.session.passport.user;
     var payload = [];
+    var coreEnvironment;
+
+    if(process.env.NODE_ENV == 'development'){
+      coreEnvironment = 'http://localhost:1337';
+    }
+    else{
+      coreEnvironment = 'http://procur-core-staging.herokuapp.com';
+    }
 
     User.findOne({ id: user }, function(err, user){
       if(err) { return res.redirect('/'); }
