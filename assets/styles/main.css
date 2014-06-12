@@ -1,0 +1,18 @@
+.userColumn h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+}
+
+.userColumn h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.userColumn h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
