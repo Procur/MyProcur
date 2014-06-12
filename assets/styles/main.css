@@ -30,6 +30,17 @@
 	letter-spacing: 0.06em;
 }
 
+.userColumn h4 {
+	font-family: 'Montserrat', sans-serif;
+	color: #404041;
+	letter-spacing: 0.06em;
+	font-size: 10px;
+	text-transform: uppercase;
+	margin-top: 25px;
+	border-bottom: 3px solid #CFCECE;
+	padding-bottom: 10px;
+}
+
 .userColumn .userColumnLinks {
 	padding-top: 25px;
 }
@@ -57,6 +68,14 @@
 	border-bottom: 1px dotted #e3e3e3;
 	padding: 15px 0px;
 
+}
+
+.userColumn .userResourceLinks a {
+	color: #4D4d4d;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 0.06em;
 }
 
 .middleHeader {
