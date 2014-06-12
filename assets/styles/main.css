@@ -5,9 +5,10 @@
 
 .userColumn h2 {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	text-transform: uppercase;
 	font-weight: 700;
+	letter-spacing: 0.05em;
 }
 
 .userColumn h3 {
@@ -15,4 +16,73 @@
 	font-size: 11px;
 	text-transform: uppercase;
 	font-weight: 700;
+}
+
+
+
+.middleHeader {
+	width: 100%;
+	background: #333132;
+}
+
+.middleHeader h1 {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 300;
+	padding: 50px 20px 20px;
+	letter-spacing: 0.05em;
+	margin: 0px;
+}
+
+.middleDescription {
+	background: #f5f4f2;
+	padding: 25px 20px;
+}
+
+.middleDescription h1 {
+	padding: 0px;
+	margin: 0px 0px 15px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	letter-spacing: 0.05em;
+}
+
+.middleDescription p {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #808080;
+	letter-spacing: 0.05em;
+	font-size: 12px;
+	line-height: 1.6em;
+}
+
+.middleList {
+	background: #EEECE9;
+	padding: 25px 20px;
+}
+
+.middleList ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.middleList ul li {
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	color: #4d4d4d;
+	padding-bottom: 10px;
+}
+
+.middleList strike {
+	color: #9C9C9C;
+}
+
+.middleList ul li i {
+	margin-right: 10px;
 }
