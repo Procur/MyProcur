@@ -8,8 +8,10 @@
         </div>
         <div class="col-sm-6 text-right">
         <!-- THIS NEEDS TO BE MADE ABSOLUTELY BEAUTIFUL -->
-        <!--
-          <% if((company.buyer == true) && (company.supplier == true)) { %>
+
+
+
+        <!--  OLD STUFF HERE
           <section id="modeToggle">
             <h4>Toggle View</h4>
             <form action="http://localhost:1337/togglemode" method="post">
@@ -20,9 +22,17 @@
               <input type="submit">
             </form>
           </section>
-          <% } %>
+          
         -->
           <ul>
+            <% if((company.buyer == true) && (company.supplier == true)) { %>
+            <% if(user.activeMode == 'buyer') { %>
+              <li class="typeToggle buyer">BUYER ACTIVE</li>
+            <% } %>
+            <% if(user.activeMode == 'supplier') { %>
+              <li class="typeToggle supplier">SUPPLIER ACTIVE</li>
+            <% } %>
+          <% } %>
             <li><a href="#">MY PROCUR</a></li>
             <li><a href="http://localhost:1337/logout"><i class="fa fa-sign-out fa-fw"></i> LOGOUT</a></li>
           </ul>
@@ -35,10 +45,10 @@
       <div class="row">
         <div class="col-sm-12 text-right">
           <ul>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">View Company Profile</a></li>
-            <li><a href="#">Edit Company Profile</a></li>
-            <li><a href="#">User Account Settings</a></li>
+            <li><a href="http://localhost:1338/dashboard">Dashboard</a></li>
+            <li><a href="http://localhost:1337/companies/<%= company.handle %>">View Company Profile</a></li>
+            <li><a href="http://localhost:1337/company/update">Edit Company Profile</a></li>
+            <li><a href="http://localhost:1337/user/update">User Account Settings</a></li>
           </ul>
         </div>
       </div>

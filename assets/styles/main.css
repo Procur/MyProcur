@@ -73,6 +73,7 @@
 
 
 
+/* DASHBOARD */
 
 .userColumn h1 {
 	font-family: 'Montserrat', sans-serif;
@@ -115,6 +116,15 @@
 	margin-top: 25px;
 	border-bottom: 3px solid #CFCECE;
 	padding-bottom: 10px;
+}
+
+.userImageColumn {
+  padding-right: 0px;
+}
+
+.userColumn .userImage {
+  width: 100%;
+  padding-top: 35px;
 }
 
 .userColumn .userColumnLinks {

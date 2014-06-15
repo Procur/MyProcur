@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col-sm-4 userColumn">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4 userImageColumn">
           <section id="userData">
-              <% if(user.image){ %><img src="<%= user.image %>"><% } %>
+              <% if(user.image){ %><img class="userImage" src="<%= user.image %>"><% } %>
           </section>
         </div>
         <div class="col-sm-8">
@@ -16,7 +16,7 @@
       <div class="row">
         <div class="col-sm-12 userColumnLinks">
           <div class="userLink">
-            <i class="fa fa-gear fa-fw"></i> <a href="http://localhost:1337/company/update">Edit Account Settings</a><br/>
+            <i class="fa fa-gear fa-fw"></i> <a href="http://localhost:1337/user/update">Edit User Account Settings</a><br/>
           </div>
           <div class="userLink">
             <i class="fa fa-external-link-square fa-fw"></i> <a href="http://localhost:1337/companies/<%= company.handle %>">View My Company Profile</a>
