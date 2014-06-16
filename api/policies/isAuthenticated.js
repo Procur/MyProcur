@@ -17,6 +17,12 @@ module.exports = function(req, res, next) {
 
   // User is not allowed
   // (default res.forbidden() behavior can be overridden in `config/403.js`)
-  return res.redirect('http://localhost:1337');
+  if(process.env.NODE_ENV == 'development'){
+    return res.redirect('http://localhost:1337');
+  }
+  else{
+    return res.redirect('http://procur-core-staging.herokuapp.com');
+  }
+
   //return res.forbidden('You are not permitted to perform this action.');
 };
