@@ -16,7 +16,7 @@ module.exports = function(req, res, next) {
     return keys;
   };
   var sess =  getKeys(req.session);
-  console.log("MYPROCUR - SESSION" + sess);
+  console.log(req);
   // User is allowed, proceed to the next policy,
   // or if this is the last policy, the controller
   if (req.session.authenticated == true)  {
