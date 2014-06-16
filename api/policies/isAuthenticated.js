@@ -8,7 +8,7 @@
  *
  */
 module.exports = function(req, res, next) {
-  console.log(req.session);
+  console.log("MYPROCUR - SESSION" + req.session);
   // User is allowed, proceed to the next policy,
   // or if this is the last policy, the controller
   if (req.session.authenticated == true)  {
